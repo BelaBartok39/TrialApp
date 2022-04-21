@@ -1,0 +1,10 @@
+<h1>Editing Contacts</h1>
+
+<%= render "form", friend: @friend %>
+
+<br>
+
+<div>
+  <%= link_to "View Contact", @friend, class:"btn btn-secondary btn-lg" %>
+  <%= link_to "Back to Contacts", friends_path, class:"btn btn-secondary btn-lg" %>
+</div>

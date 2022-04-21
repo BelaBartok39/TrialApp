@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Staffing</h1>
+
+<div id="staffs">
+  <% @staffs.each do |staff| %>
+    <%= render staff %>
+    <p>
+      <%= link_to "Edit Employee", staff %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Add Employee", new_staff_path %>
