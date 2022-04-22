@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="mb3">
     <%= form.label :employee_name, style: "display: block" %>
-    <%= form.text_field :employee_name %>
+    <%= form.text_field :employee_name, class:'form-control' %>
   </div>
 
-  <div>
+  <div class="mb3">
     <%= form.label :employee_number, style: "display: block" %>
-    <%= form.text_field :string %>
+    <%= form.text_field :string, class:'form-control' %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-secondary' %>
   </div>
 <% end %>
