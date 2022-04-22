@@ -3,12 +3,36 @@
 <h1>Staffing</h1>
 
 <div id="staffs">
-  <% @staffs.each do |staff| %>
-    <%= render staff %>
-    <p>
-      <%= link_to "Edit Employee", staff %>
-    </p>
-  <% end %>
+
+  <table class="table">
+    <thead class="table">
+      <tr>
+        <th>Name</th>
+        <th>Employee Number</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <body>
+      <% @staffs.each do |staff| %>
+        <tr>
+          <td>
+            <%= staff.employee_name %>
+            </td>
+            <td>
+              <%= staff.string %>
+            </td>
+            <td>
+              <%= link_to "Edit", edit_staff_path(staff), class:"btn btn-outline-secondary" %>
+            </td>
+            <td><%= button_to "Delete", staff, method: :delete, class:"btn btn-outline-danger" %>
+            </td>
+        </tr>
+        <% end %>
+      </body>
+
+    </table>
 </div>
 
-<%= link_to "Add Employee", new_staff_path %>
+<%= link_to "Add Employee", new_staff_path, class:"btn btn-secondary" %>
+<%= link_to "Send Staffing", new_staff_path, class:"btn btn-secondary" %>

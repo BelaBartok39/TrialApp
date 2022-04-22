@@ -1,10 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @staff %>
+<%= button_to "Destroy Employee", @staff, method: :delete, class:"btn btn-outline-danger" %>
 
-<div>
-  <%= link_to "Edit Employee", edit_staff_path(@staff) %> |
-  <%= link_to "Back to Staffing", staffs_path %>
 
-  <%= button_to "Destroy Employee", @staff, method: :delete %>
-</div>
+<%= link_to "Edit Employee", edit_staff_path(@staff), class:"btn btn-outline-secondary" %>
+<%= link_to "Back to Staffing", staffs_path, class:"btn btn-outline-secondary" %>

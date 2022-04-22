@@ -1,5 +1,5 @@
-<table class="table table-striped table-bordered table-hover">
-  <thead class="table-dark">
+<table class="table">
+  <thead class="table">
     <tr>
       <th>Name</th>
       <th>Email</th>
@@ -8,19 +8,14 @@
   </thead>
 
   <tbody>
-    <% @friends.each do |friend| %>
 
+    <% @friends.each do |friend| %>
       <tr>
         <td>
-          <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
-
+        <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
         </td>
-
         <td><%= friend.email %></td>
         <td><%= friend.phone %></td>
-
-        <!-- <td> link_to 'Delete', friend, method: :delete, class: "btn btn-outline-danger btn-sm" %></td> -->
-
       </tr>
     <% end %>
 

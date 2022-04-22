@@ -20,3 +20,8 @@
  background-color: var(--bs-light);
  border-radius: .3rem;
 }
+
+.hello {
+  margin-top: 10rem;
+  text-align: center;
+}
