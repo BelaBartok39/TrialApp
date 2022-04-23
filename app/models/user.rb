@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -8,6 +8,6 @@ class User < ApplicationRecord
 
   def send_notification
     AdminMailer.new_user(self).deliver
-  
+
   end
 end
