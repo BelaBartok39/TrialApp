@@ -10,7 +10,17 @@ ActionMailer::Base.smtp_settings = {
   :user_name              => ADMIN_USER,
   :password               => ADMIN_PASS,
 
+<<<<<<< HEAD
   # Added these. It works with either or both, at least for my configuration.
   :ssl                    => true,
   :tls                    => true,
+=======
+
+address: 'smtp.mailgun.org',
+port: 587,
+enable_starttls_auto: true,
+user_name: '***********************************************',
+password: '**********************************************',
+authentication: 'login'
+>>>>>>> 5184a3e2c75a10f3332066fc4cbd9513c22952ef
 }
