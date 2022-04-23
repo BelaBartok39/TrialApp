@@ -1,6 +1,6 @@
 class AdminMailer < ActionMailer::Base
-  default from: MAIL_USER
-  default to: ADMIN_USER
+  default from: ENV['MAIL_USER']
+  default to: ENV['ADMIN_USER']
 
 
   def new_user(user)
