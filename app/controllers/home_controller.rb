@@ -1,7 +1,13 @@
 class HomeController < ApplicationController
-  def index
-  end
+  require 'rest-client'
 
   def about
+
   end
+
+  def home
+
+    end
+
+
 end

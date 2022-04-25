@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# HTTP adaptor
+gem 'rest-client'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -30,6 +33,9 @@ gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
+# # Open Weather API
+# gem 'open-weather-api', '~> 0.0.7'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -42,8 +48,13 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# # HTTP/REST API client library
+# gem 'faraday', '~> 2.2'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
+
+gem "httparty"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
