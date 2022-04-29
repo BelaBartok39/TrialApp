@@ -1,6 +1,6 @@
 class StaffMailer < ApplicationMailer
 
-  def send_staff
+  def send_staff(message)
     # @user = params[:user]
     # @post = params[:post]
     @greeting = "Hi"
@@ -10,7 +10,8 @@ class StaffMailer < ApplicationMailer
       to: "mosesthedog83@gmail.com",
       cc: User.all.pluck(:email),
       bcc: "secret@corsego.com",
-      subject: "Staffing"
+      subject: "Staffing",
+      body: message
     )
   end
 end
