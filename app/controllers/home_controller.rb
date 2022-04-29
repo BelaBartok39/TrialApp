@@ -1,8 +1,13 @@
 class HomeController < ApplicationController
-  require 'rest-client'
+
 
   def about
 
+  end
+
+  def psyche
+    StaffMailer.send_staff('hello world').deliver
+    head :ok
   end
 
   def home

@@ -1,2 +1,0 @@
-class Wx < ApplicationRecord
-end
