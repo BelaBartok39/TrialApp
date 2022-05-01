@@ -1,14 +1,11 @@
 class StaffMailer < ApplicationMailer
 
-  def send_staff(message)
-    # @user = params[:user]
-    # @post = params[:post]
-    # attachments['oracle.png'] = File.read('app/assets/images/oracle.png')
+  def send_staff
+    @staff = Staff.all
     mail(
       from: "Nicky <nicky@strangetrails.net>",
       to: "mosesthedog83@gmail.com",
-      subject: "Staffing",
-      body: message
+      subject: "Staffing"
     )
   end
 end

@@ -2,25 +2,11 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
+    <style></style>
     <title>Staffing Email Template</title>
   </head>
 
   <body>
-  <div id="staffs">
-    json.array! @staffs, partial: "staffs/staff", as: :staff
-    <% @staffs.each do |staff| %>
-    <ol>
-      <li>
-        <%= staff.employee_name %>
-      </li>
-      <li>
-        <%= staff.string %>
-      </li>
-    </ol>
-  <% end %>
-    </div>
+  <%= yield %>
   </body>
 </html>

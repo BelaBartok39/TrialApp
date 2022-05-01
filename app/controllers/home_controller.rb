@@ -5,10 +5,6 @@ class HomeController < ApplicationController
 
   end
 
-  def psyche
-    StaffMailer.send_staff('hello world').deliver
-    head :ok
-  end
 
   def home
 

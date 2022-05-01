@@ -8,7 +8,7 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto   => true,
   :openssl_verify_mode    => "none",
   :user_name              => 'nicky@strangetrails.net',
-  :password               => 'password',
+  :password               => '{NR0W^Mxl-]r!Gz$Wr',
 
   # Added these. It works with either or both, at least for my configuration.
   :ssl                    => true,

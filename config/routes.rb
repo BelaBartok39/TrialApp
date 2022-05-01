@@ -5,12 +5,11 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-
-  resources :staffs
   devise_for :installs
+  resources :staffs
   resources :friends
   # get 'home/index'
-  post "psyche" => "home#psyche"
+  post "psyche" => "staffs#psyche"
   get 'home/about'
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
