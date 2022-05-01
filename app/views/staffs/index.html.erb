@@ -3,8 +3,6 @@
 <h1>Staffing</h1>
 
 <div id="staffs">
-
-
   <table class="table">
     <thead class="table">
       <tr>
@@ -36,4 +34,4 @@
 </div>
 
 <%= link_to "Add Employee", new_staff_path, class:"btn btn-secondary" %>
-<%= link_to "Send Staffing", new_staff_path, class:"btn btn-secondary" %>
+<button href="/psyche" data-remote="true" data-method="post" class="btn btn-secondary">Send Staffing</button>

@@ -1,0 +1,7 @@
+<div id="staff">
+  <ol>
+    <% @staff.each do |staff| %>
+      <li><%= staff.employee_name %> - <%= staff.string %></li>
+    <% end %>
+  </ol>
+</div>

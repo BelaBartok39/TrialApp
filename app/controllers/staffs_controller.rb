@@ -1,9 +1,25 @@
+
 class StaffsController < ApplicationController
   before_action :set_staff, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
   # GET /staffs or /staffs.json
   def index
     @staffs = Staff.all
+  end
+
+  def psyche
+    StaffMailer.send_staff().deliver
+    head :ok
+
+      if @staffs.psyche
+        format.html { redirect_to staffs_url(@staff), notice: "Staff was successfully sent." }
+        format.json { render :show, status: :created, location: @staff }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @staff.errors, status: :unprocessable_entity }
+      end
+
+
   end
 
   # GET /staffs/1 or /staffs/1.json
